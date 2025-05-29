@@ -1,0 +1,45 @@
+{% extends 'StelmakApp/base.html' %}
+
+{% block title %}
+Последнее вхождение
+{% endblock %}
+
+{% block small %}
+Последнее вхождение
+{% endblock %}
+
+{% block content %}
+    <h6>{{ task_formulation }}</h6>
+    <style>
+        table th, table td {
+            text-align: center;
+            vertical-align: middle;
+            min-width: 175px;
+            word-wrap: break-word;
+        }
+        table {
+            table-layout: fixed;
+            width: 100%;
+        }
+    </style>
+
+    <table class="table table-bordered">
+        <thead class="table-light">
+            <tr>
+                <th>ФИО</th>
+                <th>Дата рождения</th>
+                <th>Год поступления</th>
+                <th>Курс</th>
+                <th>Год выпуска</th>
+                <th>Результат</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {% for item in last_values %}
+                    <td>{{ item }}</td>
+                {% endfor %}
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends 'StelmakApp/base.html' %}
+
+{% block title %}
+О нас
+{% endblock %}
+
+{% block small %}
+О нас<br />
+{% endblock %}
+
+{% block content %}
+  {% load static %}
+  <h5 class="card-title text-center">Информация о программе</h5> 
+
+  <div class="card">
+    <div class="card-body">
+      <ul class="d-flex flex-row flex-wrap">
+        <h5 class="card-title text-center">Обо мне</h5>
+        {% for object in dict_of_array.me %}
+        <li class="m-2 list-group-item bg-light border p-3">
+          <img src="{% static object.img %}" class="student-img" />
+          <b>ФИО:</b><p>{{ object.name }}</p>
+          <b>Электронная почта:</b><p>{{ object.email }}</p>
+          <b>Телефон:</b><p>{{ object.phone }}</p>
+        </li>
+      </ul>
+      {% endfor %}
+      <h5 class="card-title text-center">Филология</h5>
+      <p><b>Описание программы:</b>Это область знания, состоящая из совокупности наук, изучающих духовную культуру человечества, выраженную словом, и ее историческое развитие.</p>
+
+        Чтобы изучить русскую филологию, требуется знание европейских языков и западной гуманитарной традиции. Система образования НИУ ВШЭ впервые начала параллельное обучение филологии России и Европы.</p>
+      <ul class="d-flex flex-row flex-wrap">
+        {% for object in dict_of_array.info %}
+          <li class="m-2 list-group-item bg-light border p-3">
+            <img src="{% static object.img %}" class="student-img" />
+            <h5>{{ object.job }}</h5>
+            <h6>{{ object.name }}</h6>
+            <p>
+              {{ object.email }}
+            </p>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <h5 class="card-title text-center">Сокурсники</h5>
+    <div class="card-body">
+      <table class="table, border">
+        <tbody>
+          <tr class="border">
+            <td>ФИО</td>
+            <td>Фотография</td>
+            <td>Электронная почта</td>
+          </tr>
+          {% for object in dict_of_array.info_classmates %}
+            <tr class="border">
+              <td>{{ object.name }}</td>
+              <td>
+                <img src="{% static object.img %}" class="student-img" />
+              </td>
+              <td>{{ object.email }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+{% endblock %}

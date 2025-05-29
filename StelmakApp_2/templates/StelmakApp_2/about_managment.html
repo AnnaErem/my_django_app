@@ -1,0 +1,28 @@
+{% extends 'StelmakApp_2/base.html' %}
+{% block title %}
+Менеджмент
+{% endblock %}
+
+{% block small %}
+Менеджмент
+{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <div class="card">
+        <div class="card-body">
+            <ul class="d-flex flex-row flex-wrap">
+                {% for object in dict_of_array.info %}
+                    <li class="m-2 list-group-item bg-light border p-3">
+                        <img src="{% static object.img %}" class="student-img" />
+                        <h5>{{ object.job }}</h5>
+                        <h6>{{ object.name }}</h6>
+                        <p>
+                        {{ object.email }}
+                        </p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}

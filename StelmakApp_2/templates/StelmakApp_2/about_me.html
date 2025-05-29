@@ -1,0 +1,29 @@
+{% extends 'StelmakApp_2/base.html' %}
+{% block title %}
+Я
+{% endblock %}
+
+{% block small %}
+Я
+{% endblock %}
+
+{% block content %}
+  {% load static %}
+  <h5 class="card-title text-center">Информация обо мне</h5> 
+
+    <div class="card">
+        <div class="card-body">
+        <ul class="d-flex flex-row flex-wrap">
+            {% for object in dict_of_array.me %}
+            <li class="m-2 list-group-item bg-light border p-3">
+                <img src="{% static object.img %}" class="student-img" />
+                <b>ФИО:</b><p>{{ object.name }}</p>
+                <b>Электронная почта:</b><p>{{ object.email }}</p>
+                <b>Телефон:</b><p>{{ object.phone }}</p>
+                <b>Резюме:</b><p>{{ object.resume }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+        </div>
+    </div>
+{% endblock %}

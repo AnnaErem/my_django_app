@@ -1,0 +1,34 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+
+<nav>
+  <ul class="nav nav-tabs card-header-tabs">
+
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'StelmakApp:index' %}">Главная</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'admin:index' %}">Панель администратора</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'StelmakApp:programm_model_form' %}">Форма</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'StelmakApp:programm_result' %}">Последнее вхождение</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'StelmakApp:table' %}">Таблица</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'StelmakApp:datetimenow' %}">Время</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'StelmakApp_2:about_me' %}">Приложение 2</a>
+    </li>
+  </ul>
+</nav>

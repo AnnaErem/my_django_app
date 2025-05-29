@@ -1,0 +1,34 @@
+{% extends 'StelmakApp_2/base.html' %}
+{% block title %}
+Сокурсники
+{% endblock %}
+
+{% block small %}
+Сокурсники
+{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <div>
+        <div class="card-body">
+            <table class="table, border">
+                <tbody>
+                    <tr class="border">
+                        <td>ФИО</td>
+                        <td>Фотография</td>
+                        <td>Электронная почта</td>
+                    </tr>
+                    {% for object in dict_of_array.info_classmates %}
+                        <tr class="border">
+                            <td>{{ object.name }}</td>
+                            <td>
+                            <img src="{% static object.img %}" class="student-img" />
+                            </td>
+                            <td>{{ object.email }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

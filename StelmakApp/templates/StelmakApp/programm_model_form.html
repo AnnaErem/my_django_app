@@ -1,0 +1,19 @@
+{% extends 'StelmakApp/base.html' %}
+
+{% block title %}
+Форма
+{% endblock %}
+
+{% block small %}
+Форма
+{% endblock %}
+
+{% block content %}
+<form action= "{% url 'StelmakApp:programm_model_form' %}" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <label for="id_submit">&nbsp;</label>
+    <button type="submit" id="id_submit">Добавить</button>
+    </label>
+</form>
+{% endblock %}

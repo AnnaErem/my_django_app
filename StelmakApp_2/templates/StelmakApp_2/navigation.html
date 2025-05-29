@@ -1,0 +1,12 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+<nav>
+  <ul class="nav nav-tabs card-header-tabs">
+    <li class="nav-item"><a href="{% url 'StelmakApp:index' %}">Главная</a></li>
+    <li><a class="nav-link" href="{% url 'admin:index' %}">Панель администратора</a></li>
+    <li class="nav-item"><a class="nav-link" href="{% url 'StelmakApp_2:about_me' %}">Я</a></li>
+    <li class="nav-item"><a class="nav-link" href="{% url 'StelmakApp_2:about_programm_read' %}">Описание моей образовательной программы</a></li>
+    <li class="nav-item"><a class="nav-link" href="{% url 'StelmakApp_2:about_managment' %}">Менеджмент</a></li>
+    <li class="nav-item"><a class="nav-link" href="{% url 'StelmakApp_2:about_friends' %}">Сокурсники</a></li>
+  </ul>
+  </nav>

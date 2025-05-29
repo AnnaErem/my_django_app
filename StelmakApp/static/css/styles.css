@@ -1,0 +1,100 @@
+.student-img {
+  display: flex;
+  justify-content: center; /* Центр по горизонтали */
+  align-items: center; /* Центр по вертикали */
+  width: 190px; /* Устанавливаем желаемую ширину */
+  height: 190px; /* Устанавливаем желаемую высоту */
+  object-fit: cover; /* Это обеспечит обрезку лишнего контента, чтобы изображение заполнило квадрат */
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+ol {
+  list-style-type: decimal !important; /* Принудительно включаем нумерацию */
+  padding-left: 20px; /* Отступ слева для нумерации */
+}
+
+ol.d-flex {
+  display: flex;
+  justify-content: center; /* Центр по горизонтали */
+  align-items: center; /* Центр по вертикали */
+  max-width: 800px; /* Устанавливаем максимальную ширину */
+  word-wrap: break-word; /* Разрешаем перенос длинных слов */
+}
+
+
+.bg-color {
+background-color: #967fdc;
+width:100%; 
+background-repeat: no-repeat;
+background-position: center;
+height: 200px; /* Высота шапки, можно изменить по желанию */
+}
+
+div {
+width: 100%;
+
+}
+
+th {
+font-weight:normal;
+}
+.list-group li {
+/*Контейнер*/
+display: flex;
+/*главная ось*/
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content:flex-start;
+/*поперечная ось */
+align-items:center;
+}
+
+
+.section div {
+/*Контейнер*/
+display: flex;
+/*главная ось*/
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content:flex-start;
+/*поперечная ось */
+align-items:center;
+}
+
+tr {
+/*Контейнер*/
+display: flex;
+/*главная ось*/
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content:flex-start;
+/*поперечная ось */
+align-items:center;
+}
+
+label {
+display: inline-table;
+line-height: 1.0rem;
+}
+
+input,textarea,td {
+display: ininline-table;
+resize: horizontal;
+margin: 0.5rem;
+height: 3.0rem;
+width:100%
+}
+
+td{
+height: 100%;
+}
+
+table, div {
+width: 100%;
+}
+
+
+a:hover {
+text-decoration: underline;
+}
