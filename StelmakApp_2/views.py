@@ -11,11 +11,11 @@ def index(request):
 
 def about_me(request):
     me = [    {       
-        'name': 'Стельмак Елизавета Алексеевна',
-        'img': 'images/me.jpg',
-        'email': 'eastelmak@edu.hse.ru',
-        'phone': '+79643728037',
-        'resume': 'Студентка 3 курса филологического факультета, специализация — русский язык и литература. Обладаю хорошими навыками аналитического чтения, редактирования текстов и написания научных работ. Имею опыт ведения учебных проектов, участия в конференциях и литературных конкурсах. Интересуюсь редакторской и переводческой деятельностью, а также преподаванием.'
+        'name': 'Еремеева Анна Владимировна',
+        'img': 'images/me1.jpg',
+        'email': 'averemeeva@edu.hse.ru',
+        'phone': '+79060843298',
+        'resume': 'Студентка 3 курса ОП "Социология". Имею богатый опыт проведения академических исследований, публикаций статей в журналах и участия в научных конференциях. Обладаю навыками написания академических текстов. Интересуюсь академическими и коммерческими исследованиями, в особенности UX исследованиями.'
     }
     ] 
 
@@ -29,17 +29,17 @@ def about_uni (request):
 def about_managment(request):
     info = [
     {
-        'name': 'Шерстинова Татьяна Юрьевна',
+        'name': 'Симонова Ольга Александровна',
         'job' : 'Руководитель программы',
-        'img': 'images/Sherstinova.jpg',
-        'email': 'tusherstinova@edu.hse.ru'
+        'img': 'images/manager.jpg',
+        'email': 'osiminiva@hse.ru'
     },
     {
-        'name': 'Чумакова Елена Вадимовна',
+        'name': 'Козин Виктор Ярославович',
         'job' : 'Менеджер программы',
-        'img': 'images/Chumakova.jpg',
-        'email': 'evchumakova@edu.hse.ru'
-    }, 
+        'img': 'images/supervisor.png',
+        'email': 'vkozin@hse.ru'
+    },
     ]
     dict_of_array = {'info': info}
     context = {'dict_of_array': dict_of_array}
@@ -47,12 +47,13 @@ def about_managment(request):
 
 def about_friends(request):
     info_classmates = [    
-    {'name': 'Мозоль Игорь Николаевич', 'img': 'images/Mozol.jpg', 'email': 'inmozol@edu.hse.ru'},
-    {'name': 'Завсегдалина Екатерина Иванова', 'img': 'images/Zavsegdalina.jpg', 'email': 'eizavsegdalina@edu.hse.ru'}
+    {'name': 'Петров Николай Петрович', 'img': 'images/nick.jpg', 'email': 'nppetrov@edu.hse.ru'},
+    {'name': 'Богданова Евгения Васильевна', 'img': 'images/zhenya.jpg', 'email': 'evbogdanova@edu.hse.ru'}
     ]
     dict_of_array = {'info_classmates': info_classmates}
     context = {'dict_of_array': dict_of_array}
     return render(request, 'StelmakApp_2/about_friends.html', context)
+
 
 def nav_view(request):
     nav_items = [

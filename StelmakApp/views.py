@@ -14,9 +14,12 @@ def programm_model_form(request):
     if request.method == "POST":
         form = Educational_ProgrammModelFrom(request.POST)
         if form.is_valid():
+            print(form.errors)
             print("\nform_is_valid:\n", form)
             form.save()
             return redirect("StelmakApp:programm_result")
+        if not form.is_valid():
+            print(form.errors)
     else:
         form = Educational_ProgrammModelFrom()
         print("\nform_else:\n", form)
@@ -30,7 +33,7 @@ def solution(courses):
 
 
 def programm_result(request):
-    object_list = Educational_ProgrammModel.objects.all().order_by("-id")
+    object_list = Educational_ProgrammModel.objects.all().order_by("id")
     print("\n\nobject_list: ", object_list)
 
     last_object = object_list.values("name", "date_of_birth", "year", "courses", "last_year", "result")[0]

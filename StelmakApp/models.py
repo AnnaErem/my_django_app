@@ -13,11 +13,13 @@ courses_choices = (
 class Educational_ProgrammModel(models.Model): #столбцы в таблице
     name = models.CharField(
         verbose_name="ФИО",
-        default="Стельмак Елизавета Алексеевна",
+        default='Смирнов Иван Иванов',
         max_length=500,
     )
     date_of_birth = models.DateField(
         verbose_name="Дата рождения", #здесь можно изменить формат на дату,
+        default='2004-05-10',
+
     )
     year = models.IntegerField(
         verbose_name="Год поступления", default=2022
